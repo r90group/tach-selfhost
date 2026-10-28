@@ -13,13 +13,17 @@ only, no source code.
 
 ## Release key
 
-Every package is signed with this minisign key. Its key ID is
-`4FF01EA23537AE88`. The install guide prints the same key; compare the two
+Public packages are signed with this minisign key. Its key ID is
+`3ED2D71C174A84F7`. The install guide prints the same key; compare the two
 before you trust either.
 
+This public release key was established on 28 October 2026. Private
+prereleases through 0.2.5 used key ID `4FF01EA23537AE88`; keep their original
+key when verifying those packages.
+
 ```text
-untrusted comment: minisign public key 4FF01EA23537AE88
-RWSIrjc1oh7wT/meEBLuPNtVDcuroCCJxKywOBoxhMx6HoqczXLaVRBJ
+untrusted comment: minisign public key 3ED2D71C174A84F7
+RWT3hEoXHNfSPouklRIs0r5zm+gbI7wA0/2esk8C164WwFi7bPqDhEeo
 ```
 
 ## Verify a download
@@ -30,8 +34,8 @@ version, such as `0.3.0`. On Ubuntu:
 
 ```sh
 cat > trusted-release.pub <<'EOF'
-untrusted comment: minisign public key 4FF01EA23537AE88
-RWSIrjc1oh7wT/meEBLuPNtVDcuroCCJxKywOBoxhMx6HoqczXLaVRBJ
+untrusted comment: minisign public key 3ED2D71C174A84F7
+RWT3hEoXHNfSPouklRIs0r5zm+gbI7wA0/2esk8C164WwFi7bPqDhEeo
 EOF
 curl --fail --location --remote-name https://github.com/r90group/tach-selfhost/releases/download/vVERSION/tach-selfhost-VERSION.tar.gz
 curl --fail --location --remote-name https://github.com/r90group/tach-selfhost/releases/download/vVERSION/tach-selfhost-VERSION.tar.gz.sha256
